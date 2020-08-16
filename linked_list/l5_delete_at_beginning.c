@@ -10,37 +10,14 @@ struct Node
 typedef struct Node Node_t;
 int create_a_linkedlist(Node_t **head, int n);
 
-void insert_at_nthposition(Node_t **head, int pos)
+void delete_at_beginning(Node_t **head)
 {
     if(head == NULL || *head == NULL)
         return;
 
-    Node_t *temp1 = *head;
-    Node_t *newnode, *temp2;
-    newnode = (Node_t*)malloc(sizeof(Node_t));
-    printf("Enter %dth element: ", pos);
-    scanf("%d", &newnode->data);
-    newnode->next = NULL;
-    if(pos == 1)
-    {
-        *head = newnode;
-        newnode->next = temp1;
-    }
-    else
-    {
-        for(int i = 0; i < pos - 1; i++)
-        {
-            temp2 = temp1;
-            temp1 = temp1->next;
-            if(temp1 == NULL && (i < pos - 2))
-            {
-                printf("\nOut of list size");
-                return;
-            }
-        }
-        temp2->next = newnode;
-        newnode->next = temp1;
-    }    
+    Node_t *temp = (*head)->next;
+    free(*head);
+    *head = temp;
 }
 
 void print_linkedlist(Node_t *head)
@@ -68,10 +45,9 @@ int main()
         printf("Failed to create list.");
 
     print_linkedlist(head);
-    printf("\nEnter position to which element to be inserted: ");
-    scanf("%d", &pos);
-    insert_at_nthposition(&head, pos);
-    printf("\nList after inserting at %dth position:\n", pos);
+
+    delete_at_beginning(&head);
+    printf("\nList after deletion at beginning:\n");
     print_linkedlist(head);
     return 0;    
 }

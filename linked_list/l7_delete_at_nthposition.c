@@ -10,37 +10,35 @@ struct Node
 typedef struct Node Node_t;
 int create_a_linkedlist(Node_t **head, int n);
 
-void insert_at_nthposition(Node_t **head, int pos)
+void delete_at_nthposition(Node_t **head, int pos)
 {
     if(head == NULL || *head == NULL)
         return;
 
-    Node_t *temp1 = *head;
-    Node_t *newnode, *temp2;
-    newnode = (Node_t*)malloc(sizeof(Node_t));
-    printf("Enter %dth element: ", pos);
-    scanf("%d", &newnode->data);
-    newnode->next = NULL;
+    Node_t *temp1, *temp2;
     if(pos == 1)
     {
-        *head = newnode;
-        newnode->next = temp1;
+        temp1 = (*head)->next;
+        free(*head);
+        *head = temp1;
+        return;
     }
     else
     {
+        temp1 = *head;
         for(int i = 0; i < pos - 1; i++)
-        {
+        {   
             temp2 = temp1;
             temp1 = temp1->next;
-            if(temp1 == NULL && (i < pos - 2))
+            if(temp1 == NULL && (i <= pos - 2))
             {
-                printf("\nOut of list size");
+                printf("\nInvalid posotion selected");
                 return;
             }
         }
-        temp2->next = newnode;
-        newnode->next = temp1;
-    }    
+        temp2->next = temp1->next;
+        free(temp1);
+    }
 }
 
 void print_linkedlist(Node_t *head)
@@ -68,10 +66,10 @@ int main()
         printf("Failed to create list.");
 
     print_linkedlist(head);
-    printf("\nEnter position to which element to be inserted: ");
+    printf("\nInsert position of element to be deleted: ");
     scanf("%d", &pos);
-    insert_at_nthposition(&head, pos);
-    printf("\nList after inserting at %dth position:\n", pos);
+    delete_at_nthposition(&head, pos);
+    printf("\nList after deletion at %dth position...\n", pos);
     print_linkedlist(head);
     return 0;    
 }
