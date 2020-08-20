@@ -10,7 +10,7 @@ void *commonfunction(void *para)
 	while(lock);
 	lock  = 1;
 	printf("Thread %d started\n\r", *(int*)para);
-	sleep(10);
+	//sleep(10);
 	printf("Thread %d finished\n\r", *(int*)para);
 	lock = 0;
 	
