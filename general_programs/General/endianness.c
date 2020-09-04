@@ -3,7 +3,22 @@
 
 void main()
 {
-	union
+	/******* method 1 *******/
+	unsigned int i = 1;
+	char *c = (char*)&i;
+	if(*c)
+		printf("Little endian\n");
+	else
+		printf("Big endian\n");
+	
+	/******* method 2 *******/
+	int n = 1;
+	void *ptr = &n;
+	if(*(char*)ptr)
+		printf("Little endian\n");
+	else
+		printf("Big endian\n");
+/*	union
 	{
 		short s;
 		char c[sizeof(short)];
@@ -26,7 +41,7 @@ void main()
 		printf("sizeof(short) = %ld\n", sizeof(short));
 	}
 	getchar();
-
+*/
 	exit(0);
 }
 				
