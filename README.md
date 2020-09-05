@@ -1,2 +1,2 @@
 # Practice-Codes
-## This repository contains practice programms written in C laguage.
+## This repository contains practice programs written in C laguage.
