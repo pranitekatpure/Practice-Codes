@@ -1,20 +1,22 @@
 /* 
 Input: n = 4
 Output: 
-	4 
-	3	3
-	2	2	2 
-	1	1	1	1
+					*
+				*	 	*
+			*		*		*
+		*		*		*		*
 */
 
 #include <stdio.h>
 
 void pattern_print(int n)
 {
-	for(int i = n; i >= 1; i--)
+	for(int i = 1; i <= n; i++)
 	{
-		for(int j = n; j >= i; j--)
-			printf("%d\t", i);
+		for(int k = i; k <= n; k++)
+			printf("\t");
+		for(int j = 1; j <= i; j++)
+			printf("*\t\t");
 		printf("\n");
 	}
 }

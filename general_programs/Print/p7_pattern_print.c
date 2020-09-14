@@ -2,9 +2,9 @@
 Input: n = 4
 Output: 
 	4 
-	3	3
-	2	2	2 
-	1	1	1	1
+	4	3
+	4	3	2 
+	4	3	2	1
 */
 
 #include <stdio.h>
@@ -14,7 +14,7 @@ void pattern_print(int n)
 	for(int i = n; i >= 1; i--)
 	{
 		for(int j = n; j >= i; j--)
-			printf("%d\t", i);
+			printf("%d\t", j);
 		printf("\n");
 	}
 }
