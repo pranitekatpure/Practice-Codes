@@ -1,0 +1,8 @@
+1. Fasal
+	- Tell me about you.
+	- Current job role.
+	- Explain I2C, SPI, CAN, UART protocol.
+	- Number of maximum nodes in each case.
+	- Who starts transmission first?
+	- Difference between these hardware protocol and application.
+	- Problem statement: I2C temperature sensor and display.
