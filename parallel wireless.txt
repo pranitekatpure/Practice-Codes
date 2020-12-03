@@ -1,0 +1,44 @@
+
+Round 1:
+- introduction
+- questions based on resume
+- difference between sockets and shared memory, when to use a particular IPC mechanism
+- how will you debug if some UDP packet is lost
+- TCP/IP stack
+- malloc() and free()
+- C++( STL )
+- you have an array of integers in the range [1..n] , how will find the missing number 
+- you have an array of integers in the range [1..n] , how will find the duplicate number
+- print elements of linked list in reverse order
+- reverse of linked list by normal method
+ 
+Round 2:
+- Brief introduction of projects
+- Questions on resume
+- Difference between process and thread
+- What all sections are stored between thread and process
+- IPC mechanism 
+- demand paging 
+- trashing 
+- Remove duplicate elements from linked list 
+	I/P: 1->2->3->3->4			
+	O/P: 1->2->3->4
+- Palindrome of string
+- Check if this is palindrome
+  I/P: {"m", "al", "aya", "lam"}
+
+
+Round 3:
+- Brief introduction of projects
+- Questions on resume
+- IPC mechanism
+- Server-client implementation and related APIs
+- Write a function to rotate number of bits to left, given input number and bits to rotate
+	I/P: 1100 0000 0000 0000 		bits_to_rotate = 1
+	O/P: 1000 0000 0000 0001
+- Print elements of linked list in reverse order.
+- Stack frame in detail
+- Details of IP header  
+- How the packet will be routed from host1 to host2
+	host1 -> Router1 -> Router2 -> host2
+- Memory leak and memory corruption and any tools to find these

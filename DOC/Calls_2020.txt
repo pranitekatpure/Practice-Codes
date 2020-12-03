@@ -6,3 +6,24 @@
 	- Who starts transmission first?
 	- Difference between these hardware protocol and application.
 	- Problem statement: I2C temperature sensor and display.
+
+2. Sciemetric			24-11-2020
+	- Brief yourself
+	- Current projects
+	- Struct vs Union
+	- Structure padding, packing | Structure packing with union members precautions
+	- Are pointer faster than normal variable | Using pointer members vs normal members
+	- Static volatile etc.
+	- C programs
+	- Array vs Linked list
+	- RTOS vs Genral OS
+	- Mutex and Semaphores and their difference
+	- Task vs Thread
+	- Premptive vs non premptive scheduling
+	- CAN frame explaination
+
+3. ArVizon			29-11-2020
+	- Brief yourself and projects
+	- Current projects
+	- How you choose MCU for project, what factor you will consider?
+	- SELinux, U-boot, Qualcomm Quad core mcu, wifi.
