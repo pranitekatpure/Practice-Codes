@@ -33,6 +33,7 @@ void pop(void)
 				return;
 			enqueue2(a);
 		}
+		printf("Popped element: %d\n", dequeue1());
 		front1 = rear1 = -1;
 		
 		for(i = front2; i <= rear2; i++)
