@@ -1,9 +1,9 @@
 #include<stdio.h>
 
-int dec_to_bin(unsigned num)
+void dec_to_bin(unsigned num)
 {
 	if(num == 0)
-		return 0;
+		return ;
 	dec_to_bin(num/2);
 	printf("%d", num % 2);
 }

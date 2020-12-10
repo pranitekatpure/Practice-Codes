@@ -17,7 +17,7 @@ void smallest_first_two(int arr[], int n)
 			second = first;
 			first = arr[i];
 		}
-	else if(arr[i] > second && arr[i] != first)
+		else if(arr[i] > second && arr[i] != first)
 		{
 			second = arr[i];
 		}
