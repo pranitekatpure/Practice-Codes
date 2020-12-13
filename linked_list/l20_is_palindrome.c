@@ -1,5 +1,6 @@
-/* For example if the linked list is 11->11->11->21->43->43->60 
-then removeDuplicates() should convert the list to 11->21->43->60. */ 
+/* For example if the linked list is 11->12->13->14->13->12->11 
+ * then list is Palindrome
+ */ 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,30 +17,50 @@ Node_t *head = NULL;
 int create_a_linkedlist(int n);
 void print_linkedlist(Node_t *head);
 /*----------------------------------------------
- * Function: Remove duplicates from sorted list.
+ * Function: Check if list is Palindrome.
  *---------------------------------------------*/
-void remove_duplicate(Node_t *head)
+ #define N 10
+int stack[10];
+int top = -1;
+void push(int x)
 {
-    Node_t* current = head; 
-  
-    Node_t* next_next;  
-
-    if (current == NULL)  
-       return;  
-
-    while (current->next != NULL)  
-    { 
-       if (current->data == current->next->data)  
-       {            
-           next_next = current->next->next; 
-           free(current->next); 
-           current->next = next_next;   
-       } 
-       else /* This is tricky: only advance if no deletion */
-       { 
-          current = current->next;  
-       } 
-    } 	
+	if(top == N - 1)
+		return;
+	else
+		stack[++top] = x;
+}
+int pop()
+{
+	if(top == -1)
+		return -1;
+	
+	return stack[top--];
+}
+void isPalindrome(Node_t *Head)
+{
+	int flag = 1;
+	Node_t *temp = head;
+	while(temp != NULL)
+	{
+		push(temp->data);
+		temp = temp->next;
+	}
+	printf("\n");
+	temp = head;
+	while(temp != NULL)
+	{
+		int a = pop();
+		if(a != temp->data)
+		{
+			flag = 0;
+			break;
+		}
+		temp = temp->next;
+	}
+	if(flag)
+		printf("\nList is Palindrome.");
+	else
+		printf("\nList is not Palindrome.");
 }
 /*----------------------------------------------*/
 int main()
@@ -52,8 +73,8 @@ int main()
         printf("Failed to create list.");
 
     print_linkedlist(head);
-    remove_duplicate(head);
-    print_linkedlist(head);    
+    isPalindrome(head);
+    
     return 0;    
 }
 
@@ -89,10 +110,11 @@ void print_linkedlist(Node_t *head)
         printf("\nList is empty.");
         return;
     }
+	Node_t *temp = head;
     printf("\nElements of list are: ");
-    while(head != NULL)
+    while(temp != NULL)
     {
-        printf("%d ", head->data);
-        head = head->next;
+        printf("%d ", temp->data);
+        temp = temp->next;
     }    
 }

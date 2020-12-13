@@ -1,5 +1,6 @@
-/* For example if the linked list is 11->11->11->21->43->43->60 
-then removeDuplicates() should convert the list to 11->21->43->60. */ 
+/* For example if the linked list is 12->11->12->21->41->43->21 
+ * then removeDuplicates() should convert the list to 12->11->21->41->43. 
+ */ 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,30 +17,30 @@ Node_t *head = NULL;
 int create_a_linkedlist(int n);
 void print_linkedlist(Node_t *head);
 /*----------------------------------------------
- * Function: Remove duplicates from sorted list.
+ * Function: Remove duplicates from unsorted list.
  *---------------------------------------------*/
 void remove_duplicate(Node_t *head)
 {
-    Node_t* current = head; 
-  
-    Node_t* next_next;  
-
-    if (current == NULL)  
-       return;  
-
-    while (current->next != NULL)  
-    { 
-       if (current->data == current->next->data)  
-       {            
-           next_next = current->next->next; 
-           free(current->next); 
-           current->next = next_next;   
-       } 
-       else /* This is tricky: only advance if no deletion */
-       { 
-          current = current->next;  
-       } 
-    } 	
+    Node_t *temp1, *temp2, *dup;
+	temp1 = head;
+	while(temp1 != NULL && temp1->next != NULL)
+	{
+		temp2 = temp1;
+		while(temp2->next != NULL)
+		{
+			if(temp1->data == temp2->next->data)
+			{
+				dup = temp2->next;
+				temp2->next = temp2->next->next;
+				free(dup);
+			}
+			else
+			{
+				temp2 = temp2->next;
+			}
+		}
+		temp1 = temp1->next;
+	}
 }
 /*----------------------------------------------*/
 int main()
