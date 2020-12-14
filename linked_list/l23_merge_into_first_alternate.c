@@ -28,9 +28,9 @@ void mergesListsAlternately(Node_t *head1, Node_t *head2)
 {
 	Node_t *tail, *l1, *l2;
 	tail = head1;
-	l1 = head1;
+	l1 = tail->next;
 	l2 = head2;
-	l1 = l1->next;
+
 	while(l1 != NULL && l2 != NULL)
 	{
 		tail->next = l2;

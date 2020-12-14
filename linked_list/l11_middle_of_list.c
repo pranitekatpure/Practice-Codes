@@ -20,7 +20,7 @@ void print_middle_1(Node_t **head)
     if(head == NULL || *head == NULL)
         return;
 
-    while(temp2->next != NULL && temp2->next->next != NULL)
+    while(temp2->next != NULL && temp2->next->next != NULL) //while(temp2 != NULL && temp2->next != NULL)
     {
         temp1 = temp1->next;
         temp2 = temp2->next->next;
@@ -33,7 +33,7 @@ void print_middle_2(Node_t **head)
 {
     Node_t *temp1, *temp2;
     temp1 = temp2 = *head;
-    int count = 1;
+    int count = 0;
     
     if(head == NULL || *head == NULL)
         return;
@@ -51,7 +51,7 @@ void print_middle_2(Node_t **head)
 
 int main()
 {
-    int n, pos;
+    int n;
     printf("\n\rInsert size of list to be created: ");
     scanf("%d", &n);
     Node_t *head = NULL;

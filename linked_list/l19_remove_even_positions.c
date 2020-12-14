@@ -1,5 +1,6 @@
 /* For example if the linked list is 11->12->13->14->15->16->17 
- * then remove_alternate_node() should convert the list to 11->13->15->17
+ * then remove_even_pos() should convert the list to 11->13->15->17
+ * and returns new head 
  */ 
 
 #include <stdio.h>
@@ -17,20 +18,18 @@ Node_t *head = NULL;
 int create_a_linkedlist(int n);
 void print_linkedlist(Node_t *head);
 /*----------------------------------------------
- * Function: Remove alternate node from the list.
+ * Function: Remove even positions from the list.
  *---------------------------------------------*/
-void remove_odd_pos(Node_t *Head)
+void remove_even_pos(Node_t *head)
 {
-	Node_t *prev, *node;
-	prev = Head;
-	node = Head->next;
-	while(prev != NULL && node != NULL)
+	Node_t *even, *temp;
+	temp = head;
+	while(temp != NULL && temp->next != NULL)
 	{
-		prev->next = prev->next->next;
-		free(node);
-		prev = prev->next;
-		if(prev != NULL)
-			node = prev->next;
+		even = temp->next;
+		temp->next = temp->next->next;
+		temp = temp->next;
+		free(even);
 	}
 }
 /*----------------------------------------------*/
@@ -44,7 +43,7 @@ int main()
         printf("Failed to create list.");
 
     print_linkedlist(head);
-    remove_odd_pos(head);
+    remove_even_pos(head);
     print_linkedlist(head);    
     return 0;    
 }

@@ -52,7 +52,7 @@ void _node_of_intersection(int d, Node_t *head1, Node_t *head2)
     {
         if(temp1 == NULL)
             return;
-        head1 = head1->next;
+        temp1 = temp1->next;
     }
     while(temp1 != NULL && temp2 != NULL)
     {
