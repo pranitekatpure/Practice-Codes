@@ -1,0 +1,49 @@
+1st round:
+	- What is DPDK?
+	- What is TLB?
+	- Current project
+	- TCP client server connection calls explain
+	- TCP three way handshake
+	- IPCs
+	- Thread vs process
+	- Shared memory
+	- Sychronization mechanism
+	- Mutex vs semaphore
+	- Paging, Demand paging
+	- Data structures used in scheduling alorithm
+	- Huge pages
+	- Scheduling algorithms
+	- Which IPC mechanism will you prefer
+	- WAP to delete odd position in linked list
+	- WAP to delete nth element in linked list
+
+2nd round:
+	- Brief yourself
+	- Brief current projects
+	- Last complex issue solved
+	- Last thing you enjoyed while working on something
+	- TCP 
+	- TCP connection establishment and termination process
+	- SCTP
+	- TCP vs SCTP
+	- What is ARP?
+	- Thread and IPCs
+	- Memory leak detections and avoidance
+
+3rd round:
+	- Breif projects
+	- TCP/UDP
+	- TCP connection establishment
+	- IPCs
+	- Thread
+	- Critical section?
+	- How to protect critical section?
+	- Shared memory
+	- Mutex vs semaphore
+	- Deamand paging
+	- WAP to check string is palindrome or not.
+	- WAP to duplicates from sorted linked list
+	- WAP to check linked is Palindrome or not
+	- How bubble sort work
+	- Tree
+	- WAP program to detect substring is palindrome in a given string.  "3123214"  12321

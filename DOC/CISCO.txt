@@ -1,0 +1,46 @@
+
+1st round: (No resume round)
+	- 9 ball puzzle
+	- Palindrome linked list
+	- Intersection of to linked list
+	- Network basics: TCP UDP 
+	- OSI model
+	- Vlan packet size 
+	- IP head content
+	- packet frame format
+	- TCP server- client conection establishment calls
+	- Scheduling algorithm
+	- IPC
+	- Shared memory pros cons
+	- Sharing data between threads
+	- Synchronization techniques 
+	- Mutex vs semaphore
+	- Why drivers are used?
+	- C compilation process
+	- Role of linker
+	- Static linking vs Dynamic linking ...pros cons
+	- WAP to sort array.
+
+2nd round: (Resume)
+	- Questions on resume
+	- How to delete specific element from list 
+	- Startup process of any device
+	- Startup process of emebedded device
+	- Role of bootloader
+	- Scheduling algorithms
+	- OS vs RTOS
+	- Shared memory
+	- IPC
+	- Memory leak
+	- Paging, demand paging
+	- Segmentation fault detection
+	- Thread vs Process
+	- Static linking vs Dynamic linking, pros and cons
+	- Networking basics: TCP UDP, connection, APIs 
+
+3rd round:(No resume)
+	- What is last complex you handled?
+	- How you will handle issue on our side?
+	- How you will handle situation if there is no issue on our side but customer side has.
+	- What are your expectations from Manager
+	- Team work or Individual work 

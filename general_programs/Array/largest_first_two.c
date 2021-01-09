@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-void smallest_first_two(int arr[], int n)
+void largest_first_two(int arr[], int n)
 {
     if(n < 2)
 	{
@@ -32,7 +32,7 @@ int main(void)
 {
     int arr[] = {2, 3, 6, 10, 4, 9};
 	int n = (sizeof(arr)/sizeof(int));
-	smallest_first_two(arr, n);
+	largest_first_two(arr, n);
 	
     return 0;
 }

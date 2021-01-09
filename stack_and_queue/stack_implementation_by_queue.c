@@ -2,8 +2,7 @@
 
 #define N 10
 int q1[N], q2[N];
-int rear1 = -1, rear2 = -1, front1 = -1, front2 = -1;
-int count = 0;
+int rear1 = -1, rear2 = -1, front1 = -1, front2 = -1, temp1, temp2;
 
 void enqueue1(int x);
 void enqueue2(int x);
@@ -14,7 +13,6 @@ void display(void);
 void push(int x)
 {
 	enqueue1(x);
-	count++;
 }
 
 void pop(void)
@@ -26,15 +24,22 @@ void pop(void)
 	}
 	else
 	{
-		for(i = 0; front1 != rear1; i++)
+		while(front1 != rear1)
 		{
 			a = dequeue1();
 			if(a == -1)
 				return;
 			enqueue2(a);
 		}
-		printf("Popped element: %d\n", dequeue1());
-		front1 = rear1 = -1;
+		printf("Popped element: %d\n", dequeue1()); // pop
+		temp1 = front1;
+		temp2 = rear1;
+		front1 = front2;
+		rear1 = rear2;
+		front2 = temp1;
+		rear2 = temp2;
+		
+/* 		front1 = rear1 = -1;
 		
 		for(i = front2; i <= rear2; i++)
 		{
@@ -43,7 +48,7 @@ void pop(void)
 				return;
 			enqueue1(b);
 		}
-		front2 = rear2 = -1;
+		front2 = rear2 = -1; */
 	}
 }
 
@@ -124,6 +129,10 @@ void display(void)
 }
 int main(void)
 {
+	push(6);
+	display();
+	pop();
+	display();
 	push(5);
 	push(4);
 	push(3);
@@ -133,7 +142,11 @@ int main(void)
 	push(2);
 	display();
 	pop();
+	display();
 	pop();
+	display();
+	pop();
+	display();
 	pop();
 	display();
     return 0;
