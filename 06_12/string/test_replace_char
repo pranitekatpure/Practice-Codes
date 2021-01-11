@@ -1,0 +1,25 @@
+# include <string.h>
+# include <stdio.h>
+
+void replace_char(char *str, int pos, char ch)
+{
+	int i = 0, j = 0;
+	for(i = 0; i < strlen(str); i++)
+	{
+		if(i == pos)
+			str[i] = ch;	
+	}
+	str[j] = '\0'
+}
+
+int main(void)
+{
+	char str[] = "Santosh Jadhav";
+	char char = 'a';
+	int pos = 1;
+	printf("Original String: %s/n", str);
+	del_char(str, pos, char);
+	printf("Modified String: %s/n", str);
+	return 0;
+}
+
