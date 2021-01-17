@@ -31,7 +31,7 @@ bool detect_loop_2(Node_t *head)
 {
     Node_t *temp1, *temp2;
     temp1 = temp2 = head;
-    while(temp1 != NULL && temp2 != NULL && temp2->next != NULL)
+    while(/* temp1 != NULL && */ temp2 != NULL && temp2->next != NULL)
     {
         temp1 = temp1->next;
         temp2 = temp2->next->next;

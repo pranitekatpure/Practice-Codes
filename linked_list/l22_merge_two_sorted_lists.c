@@ -42,7 +42,7 @@ Node_t* mergesSortedLists(Node_t *head1, Node_t* head2)
 		else
 		{
 			sort_node = head2;
-			head2 =sort_node->next;
+			head2 = sort_node->next;
 		}
 	}
 	newNode = sort_node;

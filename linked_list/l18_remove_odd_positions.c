@@ -1,5 +1,5 @@
 /* For example if the linked list is 11->12->13->14->15->16->17 
- * then remove_odd_pos() should convert the list to 12->14->16->60
+ * then remove_odd_pos() should convert the list to 12->14->16
  * and returns new head 
  */ 
 
