@@ -22,7 +22,7 @@ int longest_substring(char *str)
 		return 0;
 	for(int start = 0; start < n; start++)
 	{
-		for(int end = 0; end < n; end++)
+		for(int end = start; end < n; end++)
 		{
 			temp = is_nonrepeating(str, start, end);
 			if(count < temp)
@@ -33,7 +33,7 @@ int longest_substring(char *str)
 }
 int main()
 {
-	char str[] = "";//""elgoogle";
+	char str[] = "elgoogle";
 	printf("Longest sub-string without repeating chr: %d", longest_substring(str));
 	
 	return 0;

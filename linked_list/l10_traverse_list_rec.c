@@ -36,6 +36,30 @@ void reverse_traverse(Node_t **head)
     }
 }
 
+/* Brute : Print reverese */
+void reverese_print(Node_t *head)
+{
+	Node_t *temp = head;
+	int count = 0;
+	
+	while(temp != NULL)
+	{
+		temp = temp->next;
+		count++;
+	}
+	printf("\nReverse print brute: ");
+	for(int i = count; i > 0; i--)
+	{
+		temp = head;
+		for(int j = i - 1; j > 0; j--)
+			temp = temp->next;
+		printf("%3d", temp->data);
+	}
+}
+		
+			
+	
+
 int main()
 {
     int n, pos;
@@ -49,6 +73,7 @@ int main()
     printf("NULL\n");
     printf("\nNULL");
     reverse_traverse(&head);
+	reverese_print(head);
     return 0;    
 }
 

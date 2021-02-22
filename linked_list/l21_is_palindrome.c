@@ -19,7 +19,7 @@ void print_linkedlist(Node_t *head);
 /*----------------------------------------------
  * Function: Check if list is Palindrome.
  *---------------------------------------------*/
- #define N 10
+#define N 10
 int stack[10];
 int top = -1;
 void push(int x)

@@ -19,7 +19,7 @@ int swap_nibble(int n)
 	return (((n & 0xf0f0f0f0)>> 4) | ((n & 0x0f0f0f0f) << 4));
 }
 
-int swap_octect(int n)
+int swap_octet(int n)
 {
 	return (((n & 0xff00ff00)>> 8) | ((n & 0x00ff00ff) << 8));
 }

@@ -1,9 +1,9 @@
-/* Bit swapping */
+/* Rotate Bits */
 
 #include<stdio.h>
 
 #define CHAR_SIZE 8
-#define MAX_BITS (sizeof(int)*8)
+#define MAX_BITS (sizeof(int)*CHAR_SIZE)
 int rotate_left(int num, int count)
 {
 	return (int)(((unsigned)num << count) | ((unsigned)num >> (MAX_BITS - count)));

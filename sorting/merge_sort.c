@@ -8,7 +8,7 @@
 void merge(int left[], int nL, int right[], int nR, int arr[])
 {
 	int i, j, k;
-	i = j = k =0;
+	i = j = k = 0;
 	
 	while(i < nL && j < nR)
 	{

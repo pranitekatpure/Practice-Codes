@@ -16,7 +16,7 @@ void bubble_sort(int array[], int n)
 			{
 				int temp = array[j];
 				array[j] = array[j + 1];
-				array[j +1] =temp;
+				array[j + 1] =temp;
 				flag = 1;
 			}
 		}

@@ -23,7 +23,7 @@ void remove_duplicate(Node_t *head)
 {
     Node_t *temp1, *temp2, *dup;
 	temp1 = head;
-	while(temp1 != NULL) /* && temp1->next != NULL */
+	while(temp1->next != NULL) /* && temp1->next != NULL */
 	{
 		temp2 = temp1;
 		while(temp2->next != NULL)

@@ -24,7 +24,8 @@ bool is_palindrome(char *str, int start, int end)
     return true;
 }
 
-int count_of_substrs(char *str){
+int count_of_substrs(char *str)
+{
     int res = 0;
     
     for(int start = 0; start < strlen(str); start++)

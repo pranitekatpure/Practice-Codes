@@ -46,4 +46,12 @@
 	- WAP to check linked is Palindrome or not
 	- How bubble sort work
 	- Tree
-	- WAP program to detect substring is palindrome in a given string.  "3123214"  12321
+	- WAP program to detect substring is palindrome in a given string.            "3123214"  12321
+
+4th round:
+	- Paging, Demand Paging
+	- IPCs
+	- Socket
+	- Shared memory vs socket
+
+

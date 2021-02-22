@@ -15,7 +15,7 @@ void print_linkedlist(Node_t *head);
 /*----------------------------------------------
  * Function: reverse linked list using recursion
  *---------------------------------------------*/
-void reverse_list(Node_t *p)
+/* void reverse_list(Node_t *p)
 {
 	if(p->next == NULL)
 	{
@@ -26,6 +26,18 @@ void reverse_list(Node_t *p)
 	Node_t *q = p-> next;
 	q->next = p;
 	p->next = NULL;	
+} */
+Node_t *reverse_list(Node_t *p)
+{
+	if(p->next == NULL)
+	{
+		return p;
+	}
+	Node_t *new = reverse_list(p->next);
+	Node_t *q = p-> next;
+	q->next = p;
+	p->next = NULL;	
+	return new;
 }
 /*----------------------------------------------*/
 int main()
@@ -38,8 +50,8 @@ int main()
         printf("Failed to create list.");
 
     print_linkedlist(head);
-    reverse_list(head);
-    print_linkedlist(head);    
+    //reverse_list(head);
+    print_linkedlist(reverse_list(head));    
     return 0;    
 }
 
